@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mobile_15thdec.testt_1111">
+  <class table="`TABLE3`" entity-name="com.mobile_15thdec.testt_1111.Table3" schema="testt_1111">
+    <composite-id name="id" class="Table2Id">
+      <key-property name="column2" type="string">
+        <column name="`COLUMN2`" length="255" not-null="true" precision="19"/>
+      </key-property>
+      <key-property name="id" type="integer">
+        <column name="`ID`" length="255" not-null="true" precision="19"/>
+      </key-property>
+    </composite-id>
+    <one-to-one
+      name="table2"
+      class="com.mobile_15thdec.testt_1111.Table2"
+      constrained="true"
+    />
+  </class>
+  <class table="`TABLE2`" entity-name="com.mobile_15thdec.testt_1111.Table2" schema="testt_1111">
+    <composite-id name="id" class="Table2Id">
+      <key-property name="column2" type="string">
+        <column name="`COLUMN2`" length="255" not-null="true" precision="19"/>
+      </key-property>
+      <key-property name="id" type="integer">
+        <column name="`ID`" length="255" not-null="true" precision="19"/>
+      </key-property>
+    </composite-id>
+    <one-to-one name="table3" class="com.mobile_15thdec.testt_1111.Table3"/>
+    <many-to-one
+      name="table1"
+      class="Table1"
+      fetch="select"
+      update="false"
+      insert="false">
+      <column name="`ID`" length="255" not-null="true" precision="19"/>
+    </many-to-one>
+  </class>
+  <class table="`TABLE1`" entity-name="com.mobile_15thdec.testt_1111.Table1" schema="testt_1111">
+    <id name="id" type="integer">
+      <column name="`ID`" length="255" not-null="true" precision="19"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="column2" type="string">
+      <column name="`COLUMN2`" length="255" not-null="false" precision="19"/>
+    </property>
+    <set name="table2s" table="TABLE2" inverse="true" lazy="true" fetch="select">
+      <key>
+        <column name="`ID`"/>
+      </key>
+      <one-to-many class="Table2"/>
+    </set>
+  </class>
+</hibernate-mapping>

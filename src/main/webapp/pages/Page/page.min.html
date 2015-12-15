@@ -1,0 +1,61 @@
+<style id="Page.css">
+
+
+</style>
+<script id="Page.js">
+Application.$controller("PagePageController", ["$scope", function ($scope) {
+    "use strict";
+}]);
+
+
+</script>
+<script id="Page.variables.json">
+var _PagePage_Variables_ ={};
+</script>
+<script id="Page.html" type="text/ng-template">
+<wm-page data-ng-controller="PagePageController"> 
+    <wm-content> 
+        <wm-page-content columnwidth="12"> 
+            <wm-form class="panel-primary" title="Form" name="form1"> 
+                <wm-layoutgrid name="layoutgrid1"> 
+                    <wm-gridrow name="gridrow1"> 
+                        <wm-gridcolumn name="gridcolumn1"> 
+                            <wm-composite name="composite1"> 
+                                <wm-label class="col-xs-4" name="label1" caption="Name"></wm-label> 
+                                <wm-container class="col-xs-8" name="container1"> 
+                                    <wm-text tabindex="1" name="text1" placeholder="Enter Name"></wm-text> 
+                                </wm-container> 
+                            </wm-composite> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow2"> 
+                        <wm-gridcolumn name="gridcolumn2"> 
+                            <wm-composite name="composite2"> 
+                                <wm-label class="col-xs-4" name="label2" caption="Type"></wm-label> 
+                                <wm-container class="col-xs-8" name="container2"> 
+                                    <wm-select tabindex="3" name="select1" dataset="Option 1, Option 2, Option 3" datavalue="Option 3"></wm-select> 
+                                </wm-container> 
+                            </wm-composite> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                    <wm-gridrow name="gridrow3"> 
+                        <wm-gridcolumn name="gridcolumn3"> 
+                            <wm-composite name="composite3" horizontalalign="left"> 
+                                <wm-label class="col-xs-4" name="label3" caption="Description"></wm-label> 
+                                <wm-container class="col-xs-8" name="container3"> 
+                                    <wm-textarea tabindex="4" name="textarea1" placeholder="Enter Description"></wm-textarea> 
+                                </wm-container> 
+                            </wm-composite> 
+                        </wm-gridcolumn> 
+                    </wm-gridrow> 
+                </wm-layoutgrid> 
+                <wm-buttongroup class="form-action col-xs-12" name="buttongroup1" horizontalalign="right"> 
+                    <wm-button class="btn-secondary" type="reset" name="button1" caption="Reset"></wm-button> 
+                    <wm-button class="btn-warning" type="button" name="button2" caption="Cancel"></wm-button> 
+                    <wm-button class="btn-primary" type="submit" name="button3" caption="Save"></wm-button> 
+                </wm-buttongroup> 
+            </wm-form> 
+        </wm-page-content> 
+    </wm-content> 
+</wm-page>
+</script>
