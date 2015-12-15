@@ -1,10 +1,14 @@
-<wm-page data-ng-controller="MainPageController" name="mainpage">
-  <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel>
-  <wm-mobile-navbar name="mobile_navbar1" title="Title" backbuttoniconclass="fa fa-chevron-left" leftnavpaneliconclass="fa fa-bars">
-    <wm-button class="btn-transparent" caption="" type="button" name="AddButton" iconclass="glyphicon glyphicon-plus"></wm-button>
-  </wm-mobile-navbar>
-  <wm-content name="content1">
-    <wm-page-content columnwidth="12" name="page_content1"></wm-page-content>
-  </wm-content>
-  <wm-mobile-tabbar dataset="home,music,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
+<wm-page name="page1" data-ng-controller="MainPageController">
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-segmented-control name="segmented_control1">
+                <wm-segment-content name="segment_content1" caption="Title 1"></wm-segment-content>
+                <wm-segment-content name="segment_content2" caption="Title 2"></wm-segment-content>
+                <wm-segment-content name="segment_content3" caption="Title 3"></wm-segment-content>
+                <wm-segment-content name="segment_content4" caption="Title 4"></wm-segment-content>
+            </wm-segmented-control>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music,cog,edit"></wm-mobile-tabbar>
 </wm-page>
