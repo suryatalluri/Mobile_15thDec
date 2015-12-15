@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="test_mysql" type="DataService" springFile="test_mysql.spring.xml">
+    <dataobjects>
+        <dataobject javaType="com.mobile_15thdec.test_mysql.Table1">
+            <element name="column2" typeRef="string" isList="false" allowNull="false"/>
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="com.mobile_15thdec.test_mysql.Table2">
+            <element name="column2" typeRef="string" isList="false" allowNull="false"/>
+            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>
